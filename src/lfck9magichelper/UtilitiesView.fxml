@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="641.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lfck9magichelper.UtilitiesController">
+    <children>
+      <Button layoutY="593.0" mnemonicParsing="false" onAction="#handleSwitchToCollection" prefHeight="48.0" prefWidth="114.0" text="Collection" />
+      <Label layoutX="129.0" layoutY="267.0" text="Storm Count">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="93.0" layoutY="284.0" prefHeight="91.0" prefWidth="206.0" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleClearStorm" text="Clear" />
+            <Button mnemonicParsing="false" onAction="#handleStormMinus" text="-" />
+            <Text fx:id="stormNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#handleStormPlus" text="+" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="43.0" layoutY="112.0" prefHeight="100.0" prefWidth="314.0" spacing="15.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="81.0" prefWidth="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleLifeTwenty" text="20" />
+                  <Button mnemonicParsing="false" onAction="#handleLifeFourty" text="40" />
+               </children>
+            </VBox>
+            <Text fx:id="lifeNum" strokeType="OUTSIDE" strokeWidth="0.0" text="20">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <VBox alignment="CENTER" prefHeight="91.0" prefWidth="37.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleLifeMinus" text="-" />
+                  <Button mnemonicParsing="false" onAction="#handleLifeMinusFive" text="-5" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="91.0" prefWidth="41.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleLifePlus" text="+" />
+                  <Button mnemonicParsing="false" onAction="#handleLifePlusFive" text="+5" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="343.0" layoutY="30.0" prefHeight="611.0" prefWidth="155.0">
+         <children>
+            <Label text="Mana Pool">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="112.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseWhite" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_W.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="whiteNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddWhite" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="109.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseBlue" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_U.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="blueNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddBlue" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="111.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseBlack" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_B.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="blackNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddBlack" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="111.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseRed" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_R.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="redNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddRed" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="111.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseGreen" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_G.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="greenNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddGreen" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="111.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDecreaseColorless" prefHeight="31.0" prefWidth="33.0" text="-" />
+                  <VBox alignment="CENTER" prefHeight="94.0" prefWidth="44.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Mana_C.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="colorlessNum" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#handleAddColorless" prefHeight="31.0" prefWidth="31.0" text="+" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="150.0" layoutY="77.0" text="Life Total">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Text fx:id="diceResult" layoutX="150.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Roll Me!" textAlignment="CENTER" wrappingWidth="97.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="176.0" layoutY="427.0" text="Dice">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="98.0" layoutY="510.0" prefHeight="39.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleCoinToss" text="Coin" />
+            <Button mnemonicParsing="false" onAction="#handleRollD6" text="6" />
+            <Button mnemonicParsing="false" onAction="#handleRollD20" text="20" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lfck9magichelper.CollectionController">
+   <children>
+      <Button layoutY="497.0" mnemonicParsing="false" onAction="#handleSwitchToUtilities" prefHeight="61.0" prefWidth="94.0" text="Utilities" />
+      <TextField fx:id="cardNameText" layoutX="255.0" layoutY="413.0" prefHeight="31.0" prefWidth="189.0" />
+      <Button layoutX="255.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleAddCard" prefHeight="31.0" prefWidth="57.0" text="Add" />
+      <Button layoutX="312.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleDeleteCard" text="Delete" />
+      <Button layoutX="375.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleEditCard" text="Update" />
+      <TableView fx:id="cardList" layoutX="71.0" layoutY="69.0" onMouseClicked="#sendToTextBox" prefHeight="305.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="numCardsCol" prefWidth="132.0" text="Number Owned" />
+          <TableColumn fx:id="cardNameCol" prefWidth="268.0" text="Name" />
+            <TableColumn fx:id="forTradeCol" prefWidth="143.0" text="For Trade" />
+        </columns>
+      </TableView>
+      <TextField fx:id="numCardsText" layoutX="128.0" layoutY="413.0" prefHeight="31.0" prefWidth="79.0" />
+      <Label layoutX="323.0" layoutY="381.0" text="Name" />
+      <Label layoutX="139.0" layoutY="381.0" text="Quantity" />
+      <Label layoutX="522.0" layoutY="381.0" text="For Trade" />
+      <ToggleButton fx:id="forTrade" layoutX="491.0" layoutY="413.0" mnemonicParsing="false" onAction="#handleToggleForTrade" prefHeight="31.0" prefWidth="125.0" text="False" />
+      <Label fx:id="error" alignment="TOP_CENTER" layoutX="118.0" layoutY="447.0" prefHeight="82.0" prefWidth="100.0" text="Please enter a valid quantity" textAlignment="CENTER" textFill="RED" wrapText="true" />
+      <MenuBar prefHeight="32.0" prefWidth="685.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleLoad" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSave" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#handleAbout" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
